@@ -51,4 +51,25 @@ public class CC {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
+	//Métodos Funcionais
+	public void validaConta() {
+		if (this.getCc() != null){
+			//a conta já existe e pode ser acessada
+		}else {
+			//a conta não existe e pode ser criada
+		}
+	}
+	public String abrirConta() {
+		String vCC = this.getCc();
+		String vName = this.getName();
+		double vDeposit = this.getInitialDeposit();
+		
+		String vFormataSaldo = String.format("%.2f",vDeposit);
+		
+		return "Conta aberta com sucesso!!\n" +"Conta: "+ vCC+"\n"+"Titular: " + vName +"\n" + "Depositado: "+vFormataSaldo;
+	}
+	
+	
+	
+	
 }
